@@ -7,6 +7,12 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: echo "${{ secrets.ID_RSA }}" > ~/id_rsa && chmod 600 ~/id_rsa
-      - run: cat ~/id_rsa
-      - run: scp index.html -i ~/id_rsa ubuntu@51.75.20.206:/home/ubuntu
+      - name: copy files
+        uses: appleboy/scp-action@0.1.7
+        with:
+          host: 51.75.20.206
+          username: ubuntu
+          port: 22
+          key: ${{ secrets.ID_RSA }}
+          source: "index.html"
+          target: "/home/ubuntu"
