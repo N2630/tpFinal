@@ -8,11 +8,11 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: copy files
-        uses: appleboy/scp-action@0.1.7
+        uses: appleboy/scp-action@v0.1.7
         with:
           host: 51.75.20.206
           username: ubuntu
           port: 22
           key: ${{ secrets.ID_RSA }}
-          source: "index.html"
+          source: "."
           target: "/home/ubuntu"
