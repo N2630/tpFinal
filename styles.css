@@ -73,14 +73,13 @@ main {
 section {
     margin: 20px 0;
     padding: 20px;
-    background: #e6e5e5;
+    color:#c9c9c9;
+    background: #aaa9a95b;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.project {
-    margin-bottom: 20px;
-}
+/* projet */
 
 .link {
     display: inline-block;
@@ -89,6 +88,104 @@ section {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* Animation pour glisser de la droite */
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation pour glisser vers la gauche */
+@keyframes slide-out-left {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* Classes pour appliquer les animations */
+.projectContainer {
+    position: relative; /* Conteneur qui positionne les projets */
+    height: 200px; /* Ajuste cette valeur en fonction de la taille de tes projets */
+    overflow: hidden; /* Empêche les projets en transition de dépasser le conteneur */
+    border-radius: 10px;
+}
+
+.project {
+    position: absolute; /* Les projets se superposent dans le conteneur */
+    border-radius: 10px;
+    border-color: #333;
+    background-color: #1f1f1f6c;
+    overflow: hidden;
+    padding: 10px;
+    top: 0;
+    left: 2%;
+    width: 95%;
+    opacity: 0; /* Invisible par défaut */
+    transform: translateX(100%); /* Place les projets hors de vue à droite */
+    transition: transform 2s ease, opacity 0.8s ease; /* Transition fluide */
+}
+
+.project.active {
+    opacity: 1; /* Rendre visible */
+    transform: translateX(0); /* Place à la position normale */
+}
+
+.project.hidden {
+    opacity: 0; /* Rendre invisible */
+    transform: translateX(-100%); /* Glisse vers la gauche */
+}
+
+.projectContentContainer{
+    margin-left: 1%;
+}
+
+.project::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: var(--bg-image) no-repeat center center;
+    background-size: cover;
+    opacity: 0; /* Caché initialement */
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: -1;
+    
+}
+
+
+.project:hover::before {
+    opacity: 0.5;
+    animation: slide-bg 2s ease forwards;
+    background: var(--bg-image) no-repeat center center;
+}
+
+@keyframes slide-bg {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(30%);
+    }
+}
+
+
+
+
+
 
 form input, form textarea, form button {
     width: 100%;

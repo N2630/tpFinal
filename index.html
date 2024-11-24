@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - T. Noa </title>
     <link rel="stylesheet" href="styles.css">
+    <script src="./index.js"></script>
 </head>
 <body>
     <header>
 
         <div id="pp-container">
-            <img src="./ressources/pp discord chat pop.png" alt="photo de profile">
+            <img src="./ressources/pp_discord_chat_pop.png" alt="photo de profile">
         </div>
 
         <div>
-            <h1>Bienvenue sur le Portfolio de Noa T. !</h1>
+            <h1>Bienvenue sur le Portfolio de Noa T.</h1>
             <p>Etudiant en première année de BUT informatique à Blagnac</p>
         </div>
         <nav>
@@ -48,38 +49,49 @@
         </section>
         
         <section id="projects">
-            <h2>Projets</h2>
-            <div class="project">
-                <h3>Portfolio </h3>
-                <p>
-                    Un site web (responsive) conçu pour présenter mes divers projets. 
+            <h2>Projets réalisés</h2>
+            <div class="projectContainer">
 
-                </p>
-                <a class="link" href="#" target="_blank">Voir le projet</a>
-            </div>
-            <div class="project">
-                <h3>Bot discord et son site web</h3>
-                <p>
-                    Une application web permettant aux utilisateurs de créer, suivre et organiser leurs tâches quotidiennes. 
-                    Développée avec React et Firebase.
-                </p>
-                <a class="link" href="#" target="_blank">Voir le projet</a>
-            </div>
-            <div class="project">
-                <h3>Site e-commerce</h3>
-                <p>
-                    Création d'une plateforme de vente en ligne complète, incluant une gestion 
-                    de panier, des paiements sécurisés et un tableau de bord d'administration.
-                </p>
-                <a class="link" href="#" target="_blank">Voir le projet</a>
+                <div class="project" data-bg="./ressources/portfolioImage.jpg">
+                    <div class="projectContentContainer">
+                        <h3>Portfolio</h3>
+                        <p>
+                            Un site web (responsive) conçu pour présenter mes divers projets.
+                        </p>
+                        <a class="link" href="#" target="_blank">Voir le projet</a>
+                    </div>
+                </div>
+                
+
+                <div class="project" data-bg="./ressources/catBotPp.jpg">
+                    <div class="projectContentContainer">
+                        <h3>Bot Discord et son site web</h3>
+                        <p>
+                            Un bot Discord avec un site web d'accompagnement. Développement complet en Node.js.
+                        </p>
+                        <a class="link" href="#" target="_blank">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project" data-bg="./ressources/musicBotImg.jpg">
+                    <div class="projectContentContainer">
+                        <h3>Bot musique pour Discord</h3>
+                        <p>
+                            Code d'un bot discord open source. 
+                        </p>
+                        <a class="link" href="#" target="_blank">Voir le projet</a>
+                    </div>
+                </div>
+
             </div>
         </section>
+        
         
         <section id="contact">
             <h2>Contact</h2>
             <p>
                 Intéressé(e) par une collaboration ou simplement curieux(se) d'en savoir plus ? 
-                N'hésitez pas à m'envoyer un message, je réponds rapidement !
+                N'hésitez pas à m'envoyer un message, je réponds rapidement !
             </p>
             <form action="mailto:alexdupont@example.com" method="post" enctype="text/plain">
                 <label for="name">Nom :</label>
