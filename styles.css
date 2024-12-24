@@ -182,8 +182,67 @@ section {
     }
 }
 
+/* Projets */
 
+#projectDisplay {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 2%;
+    gap: 10px;
+}
 
+.projectAfficher {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    color: #fff;
+    width: 95%;
+    height: 90%;
+    overflow: hidden; /* Empêche l'image agrandie de dépasser la box */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 10px; /* Suppression des marges internes */
+    margin: 20px auto;
+    backdrop-filter: blur(15px);
+}
+
+.projectAfficher img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Rend l'image proportionnelle */
+    transition: transform 0.3s ease; /* Animation pour le zoom */
+    z-index: -1; /* L'image est derrière le texte */
+
+}
+
+.pojectSelectText {
+    position: relative; /* Position relative pour overlay texte */
+    z-index: 2; /* Met le texte devant l'image */
+    text-align: left;
+    color: #c3cebe;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Increase transparency for less visible image */
+    transition: transform 10s ease; /* Animation pour le zoom */
+    border-radius: 10px;
+
+}
+
+.projectAfficher:hover img {
+    transform: scale(1.1); /* Agrandissement de l'image au survol */
+}
+
+.pojectSelectText:hover  {
+    background: rgba(0, 0, 0, 0.123); 
+}
+/* Form */
 
 
 
