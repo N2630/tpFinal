@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets - T. Noa</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="index.js"></script>
 </head>
 <body>
     <header>
         <div id="pp-container">
-            <img src="./ressources/pp_discord_chat_pop.png" alt="photo de profile">
+            <img src="./ressources/pp_discord_chat_pop.png" alt="photo de profil">
         </div>
         <div>
             <h1>Mes Projets</h1>
@@ -30,27 +31,76 @@
             <div id="projectDisplay">
 
                 <div class="projectAfficher" id="portfolio">
-                    <div class="projectSelectText">
+                    <img src="./ressources/portfolioImage.jpg" alt="Image portfolio">
+                    <button class="projectSelectText">
+                        <h3>Portfolio</h3>
+                        <p>
+                            Un site web (celui-ci même) conçu pour présenter mes divers projets et compétences.
+                        </p>
+                    </button> 
+                </div>
+
+                <div id="modal-0" class="modal mdlInactive">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
                         <h3>Portfolio</h3>
                         <p>Un site web (responsive) conçu pour présenter mes divers projets.</p>
-                        <a class="link" href="#" target="_blank">Voir le projet</a>
-                    </div> 
-                    <img src="./ressources/portfolioImage.jpg" alt="Image portfolio">
+                    </div>
                 </div>
-
+            
                 <div class="projectAfficher" id="catBot">
+                    <img src="./ressources/catBotPp.jpg" alt="Image bot discord">
+                    <button class="projectSelectText">
                         <h3>Bot Discord et son site web</h3>
                         <p>Un bot Discord avec un site web d'accompagnement. Développement complet en Node.js.</p>
-                        <a class="link" href="#" target="_blank">Voir le projet</a>
+                    </button>
                 </div>
 
+                <div id="modal-1" class="modal mdlInactive">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Bot Discord et son site web</h3>
+                        <img src="./ressources/catBotPp.jpg" alt="Image bot discord">
+                        <p>CatBot est un bot Discord conçu pour améliorer la gestion et l'animation des serveurs.</p>
+                        <ul>
+                            <li><strong>Modération :</strong> commandes pour bannir, expulser, gérer les messages et mettre en sourdine les utilisateurs.</li>
+                            <li><strong>Gestion :</strong> système de tickets et messages de bienvenue personnalisés.</li>
+                            <li><strong>Commandes interactives :</strong> création d'équipes aléatoires et fonctionnalités musicales.</li>
+                        </ul>
+                        <p>
+                            Pour plus d'informations, visitez le site officiel : 
+                            <a href="https://catbot.belucraft.fr/" target="_blank" class="link">catbot.belucraft.fr</a>.
+                        </p>
+                    </div>
+                </div>
+            
                 <div class="projectAfficher" id="musicBot">
+                    <img src="./ressources/musicBotImg.jpg" alt="Image bot discord musique">
+                    <button class="projectSelectText">
                         <h3>Bot musique pour Discord</h3>
                         <p>Code d'un bot discord open source.</p>
-                        <a class="link" href="#" target="_blank">Voir le projet</a>
-                        <img src="" alt="">
+                    </button>
                 </div>
 
+                <div id="modal-2" class="modal mdlInactive">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Bot musique pour Discord</h3>
+                        <p>
+                            Code d'un bot discord open source. Il permet ainsi de jouer de la musique
+                            dans un salon vocal, de gérer les files d'attente.
+                        </p>
+                        <ul>
+                            <li><strong>Lecture de musique :</strong> possibilité de lire des musiques depuis YouTube, Spotify, etc.</li>
+                            <li><strong>Gestion des files d'attente :</strong> ajout, suppression et réorganisation des chansons.</li>
+                            <li><strong>Commandes de lecture :</strong> lecture, saut de chansons.</li>
+                        </ul>
+                        <p>
+                            Pour plus d'informations, visitez le dépôt GitHub : 
+                            <a href="https://github.com/N2630/Music-Bot" target="_blank" class="link">github.com/N2630/Music-Bot</a>.
+                        </p>
+                    </div>
+                </div>
                 
             </div>
         </section>

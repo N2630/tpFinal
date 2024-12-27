@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+    closeModals()
     const projects = document.querySelectorAll('.project');
 
     projects.forEach(project => {
@@ -46,4 +47,39 @@ document.addEventListener('DOMContentLoaded', () => {
             project.style.setProperty('--bg-image', `url(${bgImage})`);
         }
     });
+});
+
+// Sélectionnez tous les boutons de projet
+const projectButtons = document.querySelectorAll(".projectAfficher");
+
+// Fonction pour ouvrir une modale
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        closeModals(); // Ferme toutes les autres modales
+        modal.classList.add("mdlActive");
+        modal.style.display = "flex";
+    }
+}
+
+// Fonction pour fermer toutes les modales
+function closeModals() {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach(modal => {
+        modal.classList.remove("mdlActive");
+        modal.style.display = "none";
+    });
+}
+
+// Attachez un événement de clic à chaque bouton de projet
+projectButtons.forEach((project, index) => {
+    const modalId = `modal-${index}`; // Associez un ID unique à chaque modale
+    project.addEventListener("click", () => openModal(modalId));
+});
+
+// Écouteur global pour fermer les modales
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("close") || event.target.classList.contains("modal")) {
+        closeModals();
+    }
 });
