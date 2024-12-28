@@ -316,6 +316,7 @@ section {
     text-decoration: none;
 }
 
+
 /* Contact */
 
 #contactLinks {
@@ -381,7 +382,6 @@ section {
 }
 
 #contact {
-    max-width: 70%;
     margin-top: 20px;
     padding: 20px;
     background: #aaa9a95b;
@@ -407,6 +407,7 @@ form {
 form input, form textarea, form button {
     width: 100%;
     padding: 10px;
+    box-sizing: border-box;
     margin-top: 10px;
     border: 1px solid #9dac5e;
     border-radius: 5px;
@@ -415,18 +416,19 @@ form input, form textarea, form button {
 
 form input{
     outline: none;
-    width: 90%;
+
 }
 
 form textarea {
     resize: none;
     height: 100px;
-    max-width: 90%;
+
 }
 
 .messageGroup {
     display: flex;
     flex-direction: column;
+
 }
 form button {
     background: #788548;
@@ -456,4 +458,14 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #projectDisplay {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #contactList {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
