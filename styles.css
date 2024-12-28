@@ -468,4 +468,13 @@ footer a:hover {
     #contactList {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .contactLink:hover {
+        transform: scale(1.05);
+    }
+
+    .contactLink {
+        height: 70%;
+        width: 70%;
+    }
 }
