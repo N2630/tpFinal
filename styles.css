@@ -441,6 +441,8 @@ form button:hover {
     background: #464e26;
 }
 
+/* Footer */
+
 footer {
     text-align: center;
     padding: 20px 0;
@@ -449,7 +451,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Footer */
+
 
 footer a {
     color: #9dac5e;
