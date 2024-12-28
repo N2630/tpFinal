@@ -398,11 +398,6 @@ form {
     flex-direction: column;
 }
 
-.formGroup {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
 
 form input, form textarea, form button {
     width: 100%;
