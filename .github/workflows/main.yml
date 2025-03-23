@@ -15,5 +15,5 @@ jobs:
           port: 22
           key: ${{ secrets.ID_RSA }}
           source: "."
-          target: "/var/www/porteFolioTropCool"
+          target: "/var/www/portefolio"
           rm: true
