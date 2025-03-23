@@ -11,7 +11,7 @@ jobs:
         uses: appleboy/scp-action@v0.1.7
         with:
           host: 51.75.20.206
-          username: ubuntu
+          username: root
           port: 22
           key: ${{ secrets.ID_RSA }}
           source: "."
